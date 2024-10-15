@@ -33,7 +33,7 @@ theme = 'ga-hugo-theme'
 
 **using git**
 
-- hugo docs patter
+- hugo docs pattern
 
 ```shell
 git init
