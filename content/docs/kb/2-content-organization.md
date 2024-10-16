@@ -2,7 +2,7 @@
 title: "Content Organization"
 date: "2024-10-14T16:46:46+07:00"
 draft: false
-weight: 11
+weight: 12
 ---
 
 **Hugo has 3 content types: Home, List and Single.** <br/>
@@ -89,6 +89,6 @@ hugo new content content/_index.md
 
 Home page is treated as a list page.
 
-{{< callout type="info" >}}
-Home page and list pages are called `_index.md`
+{{< callout >}}
+**Home page and list pages are called `_index.md`**
 {{< /callout >}}

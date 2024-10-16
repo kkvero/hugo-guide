@@ -28,5 +28,31 @@ draft: false
 <br/>
 <br/>
 <div class="mb-6">
-{{< hextra/hero-button text="Get Started" link="hugo-guide" >}}
+{{< hextra/hero-button text="Get Started" link="docs" >}}
 </div>
+<br/>
+<br/>
+
+{{< hextra/feature-grid >}}
+{{< hextra/feature-card
+        title="Knowledge base"
+        icon="arrows-expand"
+        link="/hugo-guide/docs/kb"
+        subtitle="Are you completely new to Hugo? Learn how Hugo works looking at basic examples."
+        style="background: radial-gradient(ellipse at 50% 80%,rgba(0,255,255,0.25),hsla(0,0%,100%,0));"
+    >}}
+{{< hextra/feature-card
+        title="Deploy"
+        icon="sparkles"
+        link="/hugo-guide/docs/deploy"
+        subtitle="Had enough of theory? Let's make and deploy a website like the one you are looking at."
+        style="background: radial-gradient(ellipse at 50% 80%,rgba(255,255,0,0.5),hsla(0,0%,100%,0));"
+    >}}
+{{< hextra/feature-card
+        title="Troubleshooting"
+        icon="light-bulb"
+        link="/hugo-guide/docs/troubleshooting"
+        subtitle="Cannot get your head around certain aspects of how Hugo works? Let's clear out at least some issues."
+        style="background: radial-gradient(ellipse at 50% 80%,rgba(255,165,0,0.7),hsla(0,0%,100%,0));"
+    >}}
+{{< /hextra/feature-grid >}}

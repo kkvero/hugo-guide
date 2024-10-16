@@ -12,17 +12,21 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+  highlight:
+    noClasses: false
+
+enableInlineShortcodes: true
 
 menu:
   main:
     - name: Knowledge Base
-      pageRef: /hugo-guide/knowledge-base
+      pageRef: /docs/kb
       weight: 1
     - name: Deploy
-      pageRef: /hugo-guide/deploy
+      pageRef: /docs/deploy
       weight: 2
     - name: About
-      pageRef: /hugo-guide/about
+      pageRef: /docs/about
       weight: 3
     - name: Search
       weight: 4
@@ -35,11 +39,13 @@ menu:
         icon: github
 
   sidebar:
-    - name: "Go to Hugo Docs Website"
+    - name: "| Go to Hugo Docs Website"
       url: "https://gohugo.io/documentation/"
       weight: 4
 
 params:
+  description: Hugo guide is a detailed description of how to create modern, responsive beautiful static websites.
+
   navbar:
     displayTitle: true
     displayLogo: true
@@ -49,7 +55,7 @@ params:
       link: /hugo-guide
       width: 40
       height: 20
-  description: Hugo guide is a detailed description of how to create modern, responsive beautiful static websites.
+
   footer:
     displayCopyright: true
     displayPoweredBy: true
