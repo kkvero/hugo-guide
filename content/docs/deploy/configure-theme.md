@@ -2,9 +2,10 @@
 title: "Configure Theme"
 date: "2024-10-14T11:31:34+07:00"
 draft: false
-cascade:
-  type: docs
+weight: 1
 ---
+
+Here we look at what it takes to "hook" an external theme to your project.
 
 #### Create site
 

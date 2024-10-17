@@ -7,6 +7,10 @@ cascade:
 weight: 11
 ---
 
+### Prerequisites
+
+You went through the [quick start](https://gohugo.io/getting-started/quick-start/) of the official Hugo documentation (the quick start part is very terse).
+
 ### Create a new site
 
 ```bash
@@ -14,12 +18,14 @@ hugo new site travel_blog
 cd travel_blog/
 ```
 
+You can call the site anything you want, we are not really making a travel blog. Just will look at the site structure.
+
 ### Installing & Using Themes
 
 1. Get the theme custom made for this course.
    Go to https://github.com/giraffeacademy/ga-hugo-theme.
    Click on green button `code`, copy theme .git:
-   https://github.com/giraffeacademy/ga-hugo-theme.git
+   `https://github.com/giraffeacademy/ga-hugo-theme.git`
 
 **zip extracting you can do without git:**
 

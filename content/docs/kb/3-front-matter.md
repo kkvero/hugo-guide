@@ -7,13 +7,13 @@ weight: 13
 
 - Metadata, data about our content files, in YAML, TOML, JSON markdown languages. Here you specify page attributes that you can later use in layouts.
 
-```yaml
+```yaml {filename="a.yaml"}
 ---
 title: "A"
 ---
 ```
 
-```toml
+```markdown {filename="a.toml"}
 +++
 title = 'A'
 +++
@@ -22,7 +22,7 @@ title = 'A'
 - Can create custom front matter variables.
   `content/a.md`:
 
-```toml
+```markdown
 +++
 title = 'A'
 date = 2024-10-10T20:37:08+07:00
