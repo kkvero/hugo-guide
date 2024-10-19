@@ -7,11 +7,11 @@ weight: 3
 
 While following along the notes in the previous sections some questions arise. Let's clear some of them.
 
-### Various Issues
+## Various Issues
 
-#### How to start using raw html in markdown files.
+### How to start using raw html in markdown files.
 
-##### How to insert a new line in markdown.
+#### How to insert a new line in markdown.
 
 (Solving #1 using as an example to solve #2.) </br>
 _Goal_ : In markdown the way to insert line breaks (without that horrible sea of white space around) but just want to start from a new line, is to use double space.
@@ -28,7 +28,7 @@ markup:
       unsafe: true
 ```
 
-#### Getting a specific version of Hugo
+### Getting a specific version of Hugo
 
 1. E.g.getting Hugo v0.121.2 <br/>
    Download this Hugo version binary from [Github releases repository](https://github.com/gohugoio/hugo/releases)
@@ -63,7 +63,7 @@ _Why it works._ <br/>
 Hugo binaries do not need to be installed and can be run directly from the bin folder. [source](https://stackoverflow.com/questions/59969577/installing-two-different-versions-of-hugo-ubuntu)
 {{< /callout >}}
 
-#### To submodule or not to submodule.
+### To submodule or not to submodule.
 
 **To submodule** <br/>
 Using a theme as a submodule is recommended by theme developers in their docs. And it is a good way to go. And that's what was used in the deploy section of this "Hugo Guide". <br/>
@@ -85,7 +85,7 @@ In no way. <br/>
 You specify to use a submodule in `hugo.yaml`. <br/>
 `.github/workflows/hugo.yaml` does not care if you use submodules. Submodules will be downloaded when the workflow runs the `hugo` command which builds the `/public` dir of site. And that command either downloads submodules specified in `hugo.yaml` or uses `themes` folder.
 
-#### U+003E error
+### U+003E error
 
 If getting this error `unrecognized character in shortcode action: U+003E '>'` but you did close all the `}}`. Make sure you have in `hugo.yaml`:
 
@@ -93,7 +93,7 @@ If getting this error `unrecognized character in shortcode action: U+003E '>'` b
 enableInlineShortcodes: true
 ```
 
-#### Hugo shortcodes execute even if they are inside code blocks.
+### Hugo shortcodes execute even if they are inside code blocks.
 
 Use this notation (wrap in `/* */`) to prevent a shortcode from executing (when want to just document):
 
@@ -119,9 +119,58 @@ Some text.
 
 - Note, escaping shortcodes will not work inside another shortcode. E.g. inside hugo theme hextra _callout_ shortcode. Hugo will throw an error.
 
-#### Link to a page on the current site
+### Link to a page on the current site
 
 Use Hugo built-in shortcodes (in markdown): <br/>
 `[Deploy]({{</* ref "/docs/deploy" */>}})` <br/>
 In comparison, to link to an outside page in markdown: <br/>
 `[Deploy](https://example.com).`
+
+### CSS
+
+The theme might be perfect but as you start customizing it, things may start to look not so perfect.
+<br/>
+To fix how your changes look on a webpage, create inside dir `asstet`, dir `css`, file `custom.css` (name of the file might be specific to your chosen theme). And place all your desired CSS fixes there.
+
+#### Fix sticking elements
+
+When creating several badges on the landing page (the home page), they appear to stick together. (In development they show up ok, stick in production.)
+<br/>
+Add this to `assets/css/custom.css`:
+
+```CSS {filename="assets/css/custom.css"}
+#badge_container::after {
+  overflow: hidden;
+  width: auto;
+  display: inline;
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.badge_elem {
+  float: left;
+  margin-right: 0.5em;
+}
+```
+
+<small>`::after` is to clear the float used in `.badge_elem` (otherwise the badges will float over the text that follows, on narrow screens).</small>
+
+Use the defined CSS in `content/_index.md`:
+
+```html
+<div id="badge_container">
+    <div class="badge_elem">
+    {{</* hextra/hero-badge */>}}
+    <!--badge 1 content-->
+    {{</* /hextra/hero-badge */>}}
+    </div>
+
+    <div class="badge_elem">
+    {{</* hextra/hero-badge */>}}
+    <!--badge 2 content -->
+    {{</* /hextra/hero-badge */>}}
+    </div>
+</div>
+
+```
