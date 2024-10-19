@@ -1,0 +1,13 @@
+#badge_container::after {
+  overflow: hidden;
+  width: auto;
+  display: inline;
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.badge_elem {
+  float: left;
+  margin-right: 0.5em;
+}

@@ -4,28 +4,35 @@ date: 2024-10-13T21:01:00+07:00
 draft: false
 ---
 
+<div id="badge_container">
+<div class="badge_elem">
 {{< hextra/hero-badge >}}
 
-  <div class="w-2 h-2 rounded-full bg-primary-400"></div>
+  <div class="w-2 h-2 rounded-full bg-primary-400" ></div>
   <span>Free learning materials</span>
   {{< icon name="academic-cap" attributes="height=14" >}}
 {{< /hextra/hero-badge >}}
+</div>
 
+<div class="badge_elem">
 {{< hextra/hero-badge >}}
 
   <div class="w-2 h-2 rounded-full bg-primary-400"></div>
   <span>How to use Hugo with a Theme</span>
   {{< icon name="adjustments" attributes="height=14" >}}
 {{< /hextra/hero-badge >}}
+</div>
 
+<div class="badge_elem">
 {{< hextra/hero-badge >}}
 
   <div class="w-2 h-2 rounded-full bg-primary-400"></div>
   <span>Hugo: static site generator</span>
   {{< icon name="code" attributes="height=14" >}}
 {{< /hextra/hero-badge >}}
+</div>
+</div>
 
-<br/>
 <br/>
 <div class="mt-6 mb-6">
 {{< hextra/hero-headline >}}
