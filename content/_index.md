@@ -11,6 +11,20 @@ draft: false
   {{< icon name="academic-cap" attributes="height=14" >}}
 {{< /hextra/hero-badge >}}
 
+{{< hextra/hero-badge >}}
+
+  <div class="w-2 h-2 rounded-full bg-primary-400"></div>
+  <span>How to use Hugo with a Theme</span>
+  {{< icon name="adjustments" attributes="height=14" >}}
+{{< /hextra/hero-badge >}}
+
+{{< hextra/hero-badge >}}
+
+  <div class="w-2 h-2 rounded-full bg-primary-400"></div>
+  <span>Hugo: static site generator</span>
+  {{< icon name="code" attributes="height=14" >}}
+{{< /hextra/hero-badge >}}
+
 <br/>
 <br/>
 <div class="mt-6 mb-6">

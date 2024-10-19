@@ -122,6 +122,6 @@ Some text.
 #### Link to a page on the current site
 
 Use Hugo built-in shortcodes (in markdown): <br/>
-`[Deploy]({{< ref "/docs/deploy" >}})` <br/>
+`[Deploy]({{</* ref "/docs/deploy" */>}})` <br/>
 In comparison, to link to an outside page in markdown: <br/>
 `[Deploy](https://example.com).`
