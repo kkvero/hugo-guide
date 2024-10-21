@@ -5,13 +5,13 @@ draft: false
 weight: 14
 ---
 
-_Archetype = prototype = template for front matter._
+_Archetype = prototype = template for content files._
 
-Control what gets put into the front matter of .md files when you create them with `hugo new content content/file.md`.
+Control what gets put into the markdown `.md` files when you create them with `hugo new content content/file.md` (the same as `hugo new file.md`).
 
-#### Front matter for specific directories.
+#### Content template for specific directories
 
-By default the archetype used for front matter is in:
+By default the archetype that is used is in:
 `archetypes/default.md`
 <br/>
 To use another archetype, create e.g.:
