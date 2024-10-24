@@ -113,8 +113,8 @@ The .md file would pass in the `img-src` and `caption`.
 The `layouts/shortcodes/myshortcode.html` would look like:
 
 ```html
-<div style="”border:" 1px solid black”>
-  <img src="”{{" .Get `image-src`}}” />
+<div style="border: 1px solid black">
+  <img src="{{ .Get `image-src`}}" />
 </div>
 <p>{{ .Get “caption” }}</p>
 ```
