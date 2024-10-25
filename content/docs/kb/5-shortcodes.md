@@ -43,8 +43,11 @@ Consider reading about making custom shortcodes after reading the Partials secti
 
 Shortcodes = Shortcode templates
 
-- _Partials are used in layout template, shortcodes are used in content files._
-- Two types of shortcodes we can create:
+{{< callout >}}
+**Partials are used in layout templates, shortcodes are used in content files.**
+{{< /callout >}}
+
+Two _types of shortcodes_ we can create:
 
 1. a single tag shortcode and a
 2. start/end tag shortcode.
@@ -130,4 +133,44 @@ Text inside the opening and closing tags.
 
 ```html {filename="layouts/shortcodes/myshortcode.html"}
 <p style="background-color:yellow">{{.Inner}}</p>
+```
+
+#### Practical example: lorem
+
+Problem: your website is still in development, but you want to
+populate your web pages with text to test it out.
+<br/>
+Solution: create a shortcode that will generate some Lorem Ipsum text.
+
+In `layouts` create directory `shortcodes`, create a file with the name of your shortcode.
+
+```go-html-template {filename="layouts/shortcodes/lorem.html"}
+{{- $count := .Get "count" | default (.Get 0) | default 1 -}}
+{{- $loremipsum :=
+  slice "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua." "Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  consequat." "Duis aute irure dolor in reprehenderit in voluptate velit esse
+  cillum dolore eu fugiat nulla pariatur." "Excepteur sint occaecat cupidatat non
+  proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+-}}
+{{- range seq $count }}
+  <p class="loremipsum">
+    {{- range $index := seq 1 (index (shuffle (seq 0 3) ) 0 ) -}}
+      {{ index
+        $loremipsum $index
+      }}&nbsp;
+    {{- end -}}
+  </p>
+  {{- $loremipsum = shuffle $loremipsum -}}
+{{- end -}}
+```
+
+<small>Attribution: the code for the shortcode was suggested on Hugo discourse forum,
+[link to the post](https://discourse.gohugo.io/t/lorem-ipsum-shortcode-for-hugo/15604/5?u=kkvero).</small>
+
+Use the shortcode in a markdown file (this will generate 20 paragraphs of Lorem Ipsum text):
+
+```html {filename="content/posts/post1.md"}
+{{</* lorem count="20" */>}}
 ```

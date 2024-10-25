@@ -3,3 +3,6 @@ public/
 resources/
 .hugo_build.lock
 .vscode/
+.prettierrc
+package-lock.json
+package.json
