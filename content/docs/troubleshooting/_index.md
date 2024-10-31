@@ -158,7 +158,7 @@ Add this to `assets/css/custom.css`:
 
 Use the defined CSS in `content/_index.md`:
 
-```html
+```md
 <div id="badge_container">
     <div class="badge_elem">
     {{</* hextra/hero-badge */>}}
@@ -171,6 +171,6 @@ Use the defined CSS in `content/_index.md`:
     <!--badge 2 content -->
     {{</* /hextra/hero-badge */>}}
     </div>
-</div>
 
+</div>
 ```

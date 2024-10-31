@@ -39,3 +39,7 @@ weight: 4
 - [.gitignore](https://github.com/imfing/hextra/blob/main/.gitignore)
 
 - Useful deployment instructions ([theme lotusdocs](https://lotusdocs.dev/docs/deployment/platforms/github-pages/))
+
+#### Other
+
+- [List of Chroma highlighting languages](https://gohugo.io/content-management/syntax-highlighting/#list-of-chroma-highlighting-languages)

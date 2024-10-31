@@ -17,5 +17,5 @@ To use a real example we will look at the process that was necessary to configur
 {{< cards >}}
 {{< card link="/hugo-guide/docs/deploy/configure-theme" title="Configure theme" icon="chevron-double-right" >}}
 {{< card link="/hugo-guide/docs/deploy/using-theme" title="Using theme" icon="chevron-double-right" >}}
-{{< card link="/hugo-guide/docs/deploy/deploy-with-github=pages" title="Deploy with GitHub Pages" icon="chevron-double-right" >}}
+{{< card link="/hugo-guide/docs/deploy/deploy-with-github-pages" title="Deploy with GitHub Pages" icon="chevron-double-right" >}}
 {{< /cards >}}
